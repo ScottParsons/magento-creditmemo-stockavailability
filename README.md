@@ -11,6 +11,11 @@ Magento Open Source (CE) Version 1.7.x, 1.8.x, 1.9.x
 
 ## Installation
 
+Prior to installing the module, ensure that compilation is disabled.
+
+```System -> Tools -> Compilation```
+
+Copy the contents into your Magento project directory and refresh the cache.
 
 ## Usage
 
