@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * @package    SussexDev_CMStockAvailability
+ * @copyright  Copyright (c) 2018 Scott Parsons
+ * @license    https://github.com/ScottParsons/magento-creditmemo-stockavailability/blob/master/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<config>
+    <global>
+        <helpers>
+            <sussexdev_cmstockavailability>
+                <class>SussexDev_CMStockAvailability_Helper</class>
+            </sussexdev_cmstockavailability>
+        </helpers>
+        <models>
+            <sussexdev_cmstockavailability>
+                <class>SussexDev_CMStockAvailability_Model</class>
+            </sussexdev_cmstockavailability>
+        </models>
+        <events>
+            <sales_order_creditmemo_save_after>
+                <observers>
+                    <sussexdev_cmstockavailability>
+                        <class>sussexdev_cmstockavailability/observer</class>
+                        <method>refundOrderInventory</method>
+                    </sussexdev_cmstockavailability>
+                </observers>
+            </sales_order_creditmemo_save_after>
+        </events>
+    </global>
+</config>
